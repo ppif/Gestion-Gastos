@@ -5,14 +5,16 @@ public class Controler {
 
 	public static void Start () {
 	
-
-		//Dar bienvenida. Preguntar si es nuevo/a. Si no lo es, dar paso a Login.
-		//Crear el while
+	//Crear el while
+	//Dar bienvenida. Preguntar si es nuevo/a. Si no lo es, dar paso a Login.
+	
+	
 		
+		while (true) {	
 	
 	Scanner reader = new Scanner(System.in);
 
-	System.out.println("Bienvenido/a a tu espacio de gestión de gastos. ¿Eres nuevo/aquí?");
+	System.out.println("Bienvenido/a a tu espacio de gestión de gastos. ¿Eres nuevo/a aquí? Responde Quit en caso de que quieras salir de él.");
 	String respuesta1 = reader.nextLine();
 	
 	if (respuesta1.equals("Si")){
@@ -21,18 +23,26 @@ public class Controler {
 		//CreacionCuenta.crearCuenta();
 	}
 	
-	else {
+	else if (respuesta1.equals("No")) {
 		
 		//Login.login();
-		System.out.println ("¡Pues vamos a loguearte!");
 	}
 		
 		
-	}//GestionGastos.añadirGastos
+	else if (respuesta1.equals("Quit")) {
+	
+	break;
+	
+	}
+	
+	}	
+		
+	}
+}
+
+		//GestionGastos.añadirGastos
 		//GestionGastos.modificarGastos
 		//GestionGastos.borrarGastos
 		//GestionGastos.listarGastos
 		//GestionGastos.salir
 		//reader.close();
-}
-
