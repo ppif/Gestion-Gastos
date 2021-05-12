@@ -9,7 +9,7 @@ public class Login {
 	//test first commit
 	//commit 1
 	
-	public static String login() {
+	public static void login() {
 		Scanner scanner = new Scanner(System.in);
 		String login = "";
 		String password = "";
@@ -26,11 +26,11 @@ public class Login {
 		
 		if (User.checkIfUserExist(login) &&
 				User.getUserFromList(login).getPassword().equals(password)) {
-			System.out.println("Bienvenido" + login);
-			return login;
+			System.out.println("Bienvenido " + login);
+			//return login;
 		} else {
 			System.out.println("Your password or login is not correct. Try again please");
-			return "0";
+			//return "0";
 		}
 		
 	}
