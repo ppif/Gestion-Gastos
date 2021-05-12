@@ -18,21 +18,27 @@ public class Controler {
 		
 		
 		while (true) {	
-	
+			
+		//Menú de Opciones
+			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTIÓN DE GASTOS.");
+			System.out.println("Por favor, introduce la opción que desees llevar a cabo\\n");
+			System.out.println("Crear cuenta");
+			System.out.println("Entrar en mi espacio");
+			System.out.println("Salir");
 
-			System.out.println("Bienvenido/a a tu espacio de gestión de gastos. ¿Eres nuevo/a aquí? Responde Salir en caso de que quieras salir.");
 			
 			String respuesta1 = reader.nextLine();
-	
-	if (respuesta1.equals("Si")){
-		
-		System.out.println ("¡Pues vamos a crearte una cuenta!");
+			
+			
+	//Condiciones con sus caminos a métodos
+	if (respuesta1.equals("Crear cuenta")){
+		System.out.println ("¡Vamos a crearte una cuenta!");
 		//CreacionCuenta.crearCuenta();
 		GestionGastos.MenuPrincipalGestionGastos(); //esta llamada a método aquí es provisional, estoy probando que funcione.
 	}
 	
-	else if (respuesta1.equals("No")) {
-		System.out.println ("¡Pues entremos en tu espacio personal!");
+	else if (respuesta1.equals("Entrar en mi espacio")) {
+		System.out.println ("¡Entremos en tu espacio personal!");
 		//Login.login();
 	}
 		
