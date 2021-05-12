@@ -10,11 +10,11 @@ public class Login {
 	//commit 1
 	
 	public static String login() {
-		
+		Scanner scanner = new Scanner(System.in);
 		String login = "";
 		String password = "";
 	
-		Scanner scanner = new Scanner(System.in);
+		
 		System.out.print("Por favor, escribe su nombre de usuario");
 		login = scanner.next();
 		
@@ -24,10 +24,10 @@ public class Login {
 		
 		//compare with array of users
 		
-		if (!CreacionCuenta.getUser(login).equals(null) &&
-				CreacionCuenta.getPassword(password).equals(password)) {
+		if (User.checkIfUserExist(login) &&
+				User.getUserFromList(login).getPassword().equals(password)) {
 			System.out.println("Bienvenido" + login);
-			return login
+			return login;
 		} else {
 			System.out.println("Your password or login is not correct. Try again please");
 			return "0";
