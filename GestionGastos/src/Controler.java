@@ -20,7 +20,7 @@ public class Controler {
 		while (true) {	
 	
 
-			System.out.println("Bienvenido/a a tu espacio de gestión de gastos. ¿Eres nuevo/a aquí? Responde Quit en caso de que quieras salir.");
+			System.out.println("Bienvenido/a a tu espacio de gestión de gastos. ¿Eres nuevo/a aquí? Responde Salir en caso de que quieras salir.");
 			
 			String respuesta1 = reader.nextLine();
 	
@@ -28,6 +28,7 @@ public class Controler {
 		
 		System.out.println ("¡Pues vamos a crearte una cuenta!");
 		//CreacionCuenta.crearCuenta();
+		GestionGastos.MenuPrincipalGestionGastos(); //esta llamada a método aquí es provisional, estoy probando que funcione.
 	}
 	
 	else if (respuesta1.equals("No")) {
@@ -36,7 +37,7 @@ public class Controler {
 	}
 		
 		
-	else if (respuesta1.equals("Quit")) {
+	else if (respuesta1.equals("Salir")) {
 		break;
 	
 	}
@@ -51,9 +52,4 @@ public class Controler {
 	}
 }
 
-		//GestionGastos.añadirGastos
-		//GestionGastos.modificarGastos
-		//GestionGastos.borrarGastos
-		//GestionGastos.listarGastos
-		//GestionGastos.salir
 		
