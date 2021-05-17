@@ -7,28 +7,28 @@ import org.w3c.dom.UserDataHandler;
 public class CreacionCuenta {
 	
 		//Crear Cuentas Usuario
-		public static void crearCuenta(String porConsola) {
+		public static void crearCuenta() {
 			
-		String usuario = crearUsuario(porConsola);
+		String usuario = crearUsuario();
 		String password = crearPassword();
 		imprimirCuentaUsuario(usuario, password);
 		
 		// Crear nuevo obj User y asignarle usuario y pasword
 		
-		//User newUser = new User(usuario, password);
-		//User.registernewUser(newUser);
-	
+		User newUser = new User(usuario, password);
+		Controler.registerNewUser(newUser);
+		
 		}
 		
 		// Crear Usuario
-		public static String crearUsuario(String crearUsuario) {
+		public static String crearUsuario() {
 			
 			Scanner reader = new Scanner(System.in);
 			
 			System.out.println("Introduce tu nombre:");
 			String nombre1 = reader.nextLine();
 			
-		return crearUsuario;
+		return nombre1;
 			
 		}
 		

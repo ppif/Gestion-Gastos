@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 public class Controler {
 
+	public static ArrayList<User> listOfUsers = new ArrayList<>();
+
 	public static void Start() {
 
 		// Declarar nuevo objeto tipo scanner llamado reader para interactuar con
@@ -13,13 +15,13 @@ public class Controler {
 		// Crear los ifs
 
 		Scanner reader = new Scanner(System.in);
-		// ArrayList<User> users = new ArrayList<User>();
+		
 
 		while (true) {
 
 			// Menú de Opciones
-			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTIÓN DE GASTOS.");
-			System.out.println("Por favor, introduce la opción que desees llevar a cabo\\n");
+			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTION DE GASTOS.");
+			System.out.println("Por favor, introduce la opcion que desees llevar a cabo");
 			System.out.println("Crear cuenta");
 			System.out.println("Entrar en mi espacio");
 			System.out.println("Salir");
@@ -28,15 +30,16 @@ public class Controler {
 
 			// Condiciones con sus caminos a métodos
 			if (respuesta1.equals("Crear cuenta")) {
-				System.out.println("¡Vamos a crearte una cuenta!");
-				// CreacionCuenta.crearCuenta();
-				GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a método aquí es provisional, estoy probando
+				System.out.println("�Vamos a crearte una cuenta!");
+			
+				CreacionCuenta.crearCuenta();
+				//GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a método aquí es provisional, estoy probando
 															// que funcione.
 			}
 
 			else if (respuesta1.equals("Entrar en mi espacio")) {
 				System.out.println("¡Entremos en tu espacio personal!");
-				// Login.login();
+			    Login.login();
 			}
 
 			else if (respuesta1.equals("Salir")) {
@@ -51,5 +54,31 @@ public class Controler {
 
 		}
 		reader.close();
+		
+		
+		
+	}
+	// Metodos que trabajan con el Arraylist
+	
+	public static boolean checkIfUserExist(String user) {
+		for (int i = 0; i < listOfUsers.size(); i++) {
+			if (listOfUsers.get(i).getUsername().equals(user)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static User getUserFromList(String user) {
+		for (int i = 0; i < listOfUsers.size(); i++) {
+			if (listOfUsers.get(i).getUsername().equals(user)) {
+				return listOfUsers.get(i);
+			}
+		}
+		return null;
+	}
+	
+	public static void registerNewUser(User newUser) {
+		listOfUsers.add(newUser);
 	}
 }
