@@ -9,7 +9,7 @@ public class Controler {
 		// cliente.
 		// Declarar nuevo objeto de tipo Arraylist de users.
 		// Crear el while
-		// String de bienvenida: Dar opciones menú (login, createuser...)
+		// String de bienvenida: Dar opciones menÃº (login, createuser...)
 		// Crear los ifs
 
 		Scanner reader = new Scanner(System.in);
@@ -17,25 +17,25 @@ public class Controler {
 
 		while (true) {
 
-			// Menú de Opciones
-			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTIÓN DE GASTOS.");
-			System.out.println("Por favor, introduce la opción que desees llevar a cabo\\n");
+			// MenÃº de Opciones
+			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTIÃ“N DE GASTOS.");
+			System.out.println("Por favor, introduce la opciÃ³n que desees llevar a cabo\\n");
 			System.out.println("Crear cuenta");
 			System.out.println("Entrar en mi espacio");
 			System.out.println("Salir");
 
 			String respuesta1 = reader.nextLine();
 
-			// Condiciones con sus caminos a métodos
+			// Condiciones con sus caminos a mÃ©todos
 			if (respuesta1.equals("Crear cuenta")) {
-				System.out.println("¡Vamos a crearte una cuenta!");
+				System.out.println("Â¡Vamos a crearte una cuenta!");
 				// CreacionCuenta.crearCuenta();
-				GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a método aquí es provisional, estoy probando
+				GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a mÃ©todo aquÃ­ es provisional, estoy probando
 															// que funcione.
 			}
 
 			else if (respuesta1.equals("Entrar en mi espacio")) {
-				System.out.println("¡Entremos en tu espacio personal!");
+				System.out.println("Â¡Entremos en tu espacio personal!");
 				// Login.login();
 			}
 
@@ -45,7 +45,7 @@ public class Controler {
 			}
 
 			else {
-				System.out.println("Disculpa, no te he entendido. ¿Podrías repetir?");
+				System.out.println("Disculpa, no te he entendido. Â¿PodrÃ­as repetir?");
 
 			}
 
