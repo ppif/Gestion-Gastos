@@ -12,7 +12,7 @@ Scanner reader = new Scanner(System.in);
 	
 	
 
-		CreacionCuenta.crearCuenta("cuenta");
+		CreacionCuenta.crearCuenta(nombre1);
 		//GestionGastos.añadirGastos
 		//GestionGastos.modificarGastos
 		//GestionGastos.borrarGastos

@@ -1,23 +1,33 @@
 
 import java.util.Random;
+import java.util.Scanner;
+
+import org.w3c.dom.UserDataHandler;
 
 public class CreacionCuenta {
 	
 		//Crear Cuentas Usuario
 		public static void crearCuenta(String porConsola) {
-		
-			
 			
 		String usuario = crearUsuario(porConsola);
 		String password = crearPassword();
 		imprimirCuentaUsuario(usuario, password);
+		
+		// Crear nuevo obj User y asignarle usuario y pasword
+		
+		//User newUser = new User(usuario, password);
+		//User.registernewUser(newUser);
 	
 		}
 		
 		// Crear Usuario
 		public static String crearUsuario(String crearUsuario) {
 			
-	
+			Scanner reader = new Scanner(System.in);
+			
+			System.out.println("Introduce tu nombre:");
+			String nombre1 = reader.nextLine();
+			
 		return crearUsuario;
 			
 		}
