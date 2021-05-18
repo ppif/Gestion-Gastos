@@ -28,7 +28,7 @@ public class Login {
 		if (Controler.checkIfUserExist(usuario) &&
 				Controler.getUserFromList(usuario).getPassword().equals(password)) {
 			System.out.println("Bienvenido " + usuario);
-			//return login;
+			//return añadir metodo que te lleva a ControlerUsuario;
 			ControlerGastos.MenuPrincipalGestionGastos(usuario);
 		} else {
 			System.out.println("Your password or login is not correct. Try again please");
