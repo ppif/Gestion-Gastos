@@ -1,3 +1,4 @@
+package gastos;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -28,8 +29,8 @@ public class Controler {
 
 			String respuesta1 = reader.nextLine();
 
-			// Condiciones con sus caminos a métodos
-			if (respuesta1.equals("Crear cuenta")) {
+			// Condiciones con sus caminos a metodos
+			if (respuesta1.equalsIgnoreCase("Crear cuenta")) {
 				System.out.println("�Vamos a crearte una cuenta!");
 			
 				CreacionCuenta.crearCuenta();
@@ -37,12 +38,12 @@ public class Controler {
 															// que funcione.
 			}
 
-			else if (respuesta1.equals("Entrar en mi espacio")) {
+			else if (respuesta1.equalsIgnoreCase("Entrar en mi espacio")) {
 				System.out.println("¡Entremos en tu espacio personal!");
 			    Login.login();
 			}
 
-			else if (respuesta1.equals("Salir")) {
+			else if (respuesta1.equalsIgnoreCase("Salir")) {
 				break;
 
 			}

@@ -1,3 +1,4 @@
+package gastos;
 import java.util.ArrayList;
 
 public class Usuario {

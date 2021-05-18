@@ -1,3 +1,4 @@
+package gastos;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -31,27 +32,27 @@ public class ControlerGastos {
 			Scanner reader = new Scanner(System.in);
 			String SeleccionMenu = reader.nextLine();
 
-			if (SeleccionMenu.equals("Añadir gastos")) {
+			if (SeleccionMenu.equalsIgnoreCase("Añadir gastos")) {
 
 				// GestionGastos.añadirGastos(usuario)
 			}
 
-			else if (SeleccionMenu.equals("Modificar gastos")) {
+			else if (SeleccionMenu.equalsIgnoreCase("Modificar gastos")) {
 
 				// GestionGastos.modificarGastos(usuario)
 			}
 
-			else if (SeleccionMenu.equals("Borrar gastos")) {
+			else if (SeleccionMenu.equalsIgnoreCase("Borrar gastos")) {
 
 				// GestionGastos.borrarGastos(usuario)
 			}
 
-			else if (SeleccionMenu.equals("Listado de gastos")) {
+			else if (SeleccionMenu.equalsIgnoreCase("Listado de gastos")) {
 
 				// GestionGastos.listarGastos(usuario)
 			}
 
-			else if (SeleccionMenu.equals("Salir")) {
+			else if (SeleccionMenu.equalsIgnoreCase("Salir")) {
 				break;
 			}
 
