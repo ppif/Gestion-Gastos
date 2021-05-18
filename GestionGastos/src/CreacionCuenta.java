@@ -15,7 +15,7 @@ public class CreacionCuenta {
 		
 		// Crear nuevo obj User y asignarle usuario y pasword
 		
-		User newUser = new User(usuario, password);
+		Usuario newUser = new Usuario(usuario, password);
 		Controler.registerNewUser(newUser);
 		
 		}

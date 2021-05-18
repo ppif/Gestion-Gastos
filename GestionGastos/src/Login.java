@@ -11,12 +11,12 @@ public class Login {
 	
 	public static void login() {
 		Scanner scanner = new Scanner(System.in);
-		String login = "";
+		String usuario = "";
 		String password = "";
 	
 		
 		System.out.print("Por favor, escribe su nombre de usuario\n");
-		login = scanner.nextLine();
+		usuario = scanner.nextLine();
 		
 		System.out.print("Por favor, escribe contraseña\n");
 		password = scanner.nextLine();
@@ -24,11 +24,11 @@ public class Login {
 		
 		//compare with array of users
 		
-		if (Controler.checkIfUserExist(login) &&
-				Controler.getUserFromList(login).getPassword().equals(password)) {
-			System.out.println("Bienvenido " + login);
+		if (Controler.checkIfUserExist(usuario) &&
+				Controler.getUserFromList(usuario).getPassword().equals(password)) {
+			System.out.println("Bienvenido " + usuario);
 			//return login;
-			GestionGastos.MenuPrincipalGestionGastos();
+			ControlerGastos.MenuPrincipalGestionGastos(usuario);
 		} else {
 			System.out.println("Your password or login is not correct. Try again please");
 			//return "0";

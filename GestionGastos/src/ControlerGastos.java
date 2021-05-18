@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class GestionGastos {
+public class ControlerGastos {
 
 	// importar util scanner y arraylist para el futuro array de gastos
 	// nuevo objeto tipo Arraylist de gastos?.
@@ -15,7 +15,7 @@ public class GestionGastos {
 
 	// ArrayList<Gasto> gastos = new ArrayList<Gasto>();
 
-	public static void MenuPrincipalGestionGastos() {
+	public static void MenuPrincipalGestionGastos(String usuario) {
 
 		while (true) {
 
@@ -33,22 +33,22 @@ public class GestionGastos {
 
 			if (SeleccionMenu.equals("Añadir gastos")) {
 
-				// GestionGastos.añadirGastos
+				// GestionGastos.añadirGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equals("Modificar gastos")) {
 
-				// GestionGastos.modificarGastos
+				// GestionGastos.modificarGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equals("Borrar gastos")) {
 
-				// GestionGastos.borrarGastos
+				// GestionGastos.borrarGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equals("Listado de gastos")) {
 
-				// GestionGastos.listarGastos
+				// GestionGastos.listarGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equals("Salir")) {

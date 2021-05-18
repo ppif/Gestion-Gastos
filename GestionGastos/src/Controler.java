@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Controler {
 
-	public static ArrayList<User> listOfUsers = new ArrayList<>();
+	public static ArrayList<Usuario> listOfUsers = new ArrayList<>();
 
 	public static void Start() {
 
@@ -48,7 +48,7 @@ public class Controler {
 			}
 
 			else {
-				System.out.println("Disculpa, no te he entendido. ¿Podrías repetir?");
+				System.out.println("Disculpa, no te he entendido Puedes repetir?");
 
 			}
 
@@ -69,7 +69,7 @@ public class Controler {
 		return false;
 	}
 	
-	public static User getUserFromList(String user) {
+	public static Usuario getUserFromList(String user) {
 		for (int i = 0; i < listOfUsers.size(); i++) {
 			if (listOfUsers.get(i).getUsername().equals(user)) {
 				return listOfUsers.get(i);
@@ -78,7 +78,9 @@ public class Controler {
 		return null;
 	}
 	
-	public static void registerNewUser(User newUser) {
+	public static void registerNewUser(Usuario newUser) {
 		listOfUsers.add(newUser);
 	}
+	
+	//buscarUsuarioValidado metodo
 }
