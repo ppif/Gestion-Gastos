@@ -1,4 +1,4 @@
-package gastos;
+package utilidades;
 
 public class Utilidades {
 

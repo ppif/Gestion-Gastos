@@ -1,4 +1,4 @@
-package gastos;
+package clasesconmetodos;
 
 public class GastosManipulador {
 

@@ -1,8 +1,8 @@
-package gastos;
+package controler;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Controler {
+public class ControlerPrincipal {
 
 	public static ArrayList<Usuario> listOfUsers = new ArrayList<>();
 
@@ -14,6 +14,8 @@ public class Controler {
 		// Crear el while
 		// String de bienvenida: Dar opciones menú (login, createuser...)
 		// Crear los ifs
+		//
+		//
 
 		Scanner reader = new Scanner(System.in);
 		
@@ -33,14 +35,14 @@ public class Controler {
 			if (respuesta1.equalsIgnoreCase("Crear cuenta")) {
 				System.out.println("�Vamos a crearte una cuenta!");
 			
-				CreacionCuenta.crearCuenta();
+				CreacionUsuario.crearCuenta();
 				//GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a método aquí es provisional, estoy probando
 															// que funcione.
 			}
 
 			else if (respuesta1.equalsIgnoreCase("Entrar en mi espacio")) {
 				System.out.println("¡Entremos en tu espacio personal!");
-			    Login.login();
+			    LoginControler.login();
 			}
 
 			else if (respuesta1.equalsIgnoreCase("Salir")) {
