@@ -1,4 +1,4 @@
-package modelo;
+package ProyectoGastos;
 import java.util.Scanner;
 
 import controler.ControlerPrincipal;
