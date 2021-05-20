@@ -1,4 +1,5 @@
 package gastos;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -16,7 +17,6 @@ public class Controler {
 		// Crear los ifs
 
 		Scanner reader = new Scanner(System.in);
-		
 
 		while (true) {
 
@@ -32,15 +32,16 @@ public class Controler {
 			// Condiciones con sus caminos a metodos
 			if (respuesta1.equalsIgnoreCase("Crear cuenta")) {
 				System.out.println("�Vamos a crearte una cuenta!");
-			
+
 				CreacionCuenta.crearCuenta();
-				//GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a método aquí es provisional, estoy probando
-															// que funcione.
+				// GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a método aquí
+				// es provisional, estoy probando
+				// que funcione.
 			}
 
 			else if (respuesta1.equalsIgnoreCase("Entrar en mi espacio")) {
 				System.out.println("¡Entremos en tu espacio personal!");
-			    Login.login();
+				Login.login();
 			}
 
 			else if (respuesta1.equalsIgnoreCase("Salir")) {
@@ -55,12 +56,10 @@ public class Controler {
 
 		}
 		reader.close();
-		
-		
-		
+
 	}
 	// Metodos que trabajan con el Arraylist
-	
+
 	public static boolean checkIfUserExist(String user) {
 		for (int i = 0; i < listOfUsers.size(); i++) {
 			if (listOfUsers.get(i).getUsername().equals(user)) {
@@ -69,7 +68,7 @@ public class Controler {
 		}
 		return false;
 	}
-	
+
 	public static Usuario getUserFromList(String user) {
 		for (int i = 0; i < listOfUsers.size(); i++) {
 			if (listOfUsers.get(i).getUsername().equals(user)) {
@@ -78,10 +77,38 @@ public class Controler {
 		}
 		return null;
 	}
-	
+
 	public static void registerNewUser(Usuario newUser) {
 		listOfUsers.add(newUser);
 	}
+
+	public static boolean eliminarUsuario(String usuario) {
+
+		if (checkIfUserExist(usuario)) {
+			listOfUsers.remove(getUserFromList(usuario));
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static boolean cambiarNombreUsuario(String usuario, String newUserName) {
 	
-	//buscarUsuarioValidado metodo
+		if (checkIfUserExist(usuario)) {
+			getUserFromList(usuario).setUsername(newUserName);
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean cambiarContrasenia(String usuario, String nuevaContrasenia) {
+
+		if (checkIfUserExist(usuario)) {
+			getUserFromList(usuario).setPassword(nuevaContrasenia);
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

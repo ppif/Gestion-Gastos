@@ -19,7 +19,7 @@ public class ControlerGastos {
 	public static void MenuPrincipalGestionGastos(String usuario) {
 
 		while (true) {
-
+			
 			System.out.println("MENU PRINCIPAL: GESTIONA TUS GASTOS");
 			System.out.println("Añadir gastos");
 			System.out.println("Modificar gastos");

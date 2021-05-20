@@ -31,12 +31,12 @@ public class Login {
 				Controler.getUserFromList(usuario).getPassword().equals(password)) {
 			System.out.println("Bienvenido " + usuario);
 			//return añadir metodo que te lleva a ControlerUsuario;
+			
+			ControlerUsuario.menu(usuario);
 			ControlerGastos.MenuPrincipalGestionGastos(usuario);
 		} else {
-			System.out.println("Your password or login is not correct. Try again please");
+			System.out.println("La contraseña o login no es correcto. Prueba otra vez");
 			//return "0";
-		}
-		
+		}	
 	}
-	
 }
