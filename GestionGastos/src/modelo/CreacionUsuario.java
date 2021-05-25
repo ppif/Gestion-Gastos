@@ -1,11 +1,13 @@
-package gastos;
+package modelo;
 
 import java.util.Random;
 import java.util.Scanner;
 
 import org.w3c.dom.UserDataHandler;
 
-public class CreacionCuenta {
+import controler.ControlerPrincipal;
+
+public class CreacionUsuario {
 	
 		//Crear Cuentas Usuario
 		public static void crearCuenta() {
@@ -17,7 +19,7 @@ public class CreacionCuenta {
 		// Crear nuevo obj User y asignarle usuario y pasword
 		
 		Usuario newUser = new Usuario(usuario, password);
-		Controler.registerNewUser(newUser);
+		ControlerPrincipal.registerNewUser(newUser);
 		
 		}
 		

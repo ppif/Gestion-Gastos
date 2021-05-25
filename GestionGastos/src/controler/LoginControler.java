@@ -1,7 +1,7 @@
-package gastos;
+package controler;
 import java.util.Scanner;
 
-public class Login {
+public class LoginControler {
 	
 	//pedir al usuario nombre y contraseña
 	//con sus mensajes por pantalla
@@ -25,8 +25,8 @@ public class Login {
 		
 		//compare with array of users
 		
-		if (Controler.checkIfUserExist(usuario) &&
-				Controler.getUserFromList(usuario).getPassword().equals(password)) {
+		if (ControlerPrincipal.checkIfUserExist(usuario) &&
+				ControlerPrincipal.getUserFromList(usuario).getPassword().equals(password)) {
 			System.out.println("Bienvenido " + usuario);
 			//return añadir metodo que te lleva a ControlerUsuario;
 			ControlerGastos.MenuPrincipalGestionGastos(usuario);

@@ -1,23 +1,18 @@
-package gastos;
+package controler;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class ControlerGastos {
 
-	// importar util scanner y arraylist para el futuro array de gastos
-	// nuevo objeto tipo Arraylist de gastos?.
-	// crear método start: MenuPrincipalGestionGastos
-	// crear el while
-	// nuevo objeto reader para la respuesta
-	// String con las opciones de gestión
-	// generar los ifs
-	// crear métodos (añadirGastos,modificarGastos,borrarGastos, listarGastos y
-	// salir)
-
-	// ArrayList<Gasto> gastos = new ArrayList<Gasto>();
-
+	// importamos util scanner y arraylist para el futuro array de gastos????????
+	// nuevo objeto tipo Arraylist de gastos??????????????
+	// ArrayList<Gasto> gastos = new ArrayList<Gasto>();???????????
+	
+	// creamos metodo menu seleccion: MenuPrincipalGestionGastos
 	public static void MenuPrincipalGestionGastos(String usuario) {
 
+		
+	//creamos bucle con sus condiciones y llamadas a metodos contenidos en GastosManipulador	
 		while (true) {
 
 			System.out.println("MENU PRINCIPAL: GESTIONA TUS GASTOS");
@@ -29,27 +24,28 @@ public class ControlerGastos {
 			System.out.println("--------------------------------\n");
 			System.out.println("Por favor, introduce la opción que desees llevar a cabo\n");
 
+			// nuevo objeto reader para la respuesta y String para almacenarla
 			Scanner reader = new Scanner(System.in);
 			String SeleccionMenu = reader.nextLine();
 
 			if (SeleccionMenu.equalsIgnoreCase("Añadir gastos")) {
 
-				// GestionGastos.añadirGastos(usuario)
+				// GastosManipulador.añadirGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equalsIgnoreCase("Modificar gastos")) {
 
-				// GestionGastos.modificarGastos(usuario)
+				// GastosManipulador.modificarGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equalsIgnoreCase("Borrar gastos")) {
 
-				// GestionGastos.borrarGastos(usuario)
+				// GastosManipulador.borrarGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equalsIgnoreCase("Listado de gastos")) {
 
-				// GestionGastos.listarGastos(usuario)
+				// GastosManipulador.listarGastos(usuario)
 			}
 
 			else if (SeleccionMenu.equalsIgnoreCase("Salir")) {
@@ -64,7 +60,7 @@ public class ControlerGastos {
 
 		}
 
-		// public static GestionGastosGenerico () {}
+		
 
 	}
 

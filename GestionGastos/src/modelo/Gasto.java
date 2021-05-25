@@ -1,4 +1,4 @@
-package gastos;
+package modelo;
 
 public class Gasto {
 
