@@ -12,7 +12,7 @@ public class ControlerPrincipal {
 	// Creamos objeto de tipo Arraylist de usuarios.
 	public static ArrayList<Usuario> listOfUsers = new ArrayList<>();
 
-	// Creamos método de inicio del programa:
+	// Creamos metodo de inicio del programa:
 	public static void Start() {
 
 		// Declaramos nuevo objeto scanner (reader) para interactuar con cliente.
