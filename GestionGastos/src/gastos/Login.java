@@ -37,6 +37,8 @@ public class Login {
 		} else {
 			System.out.println("La contraseña o login no es correcto. Prueba otra vez");
 			//return "0";
-		}	
+		}
+		
+		scanner.close();
 	}
 }
