@@ -1,11 +1,12 @@
 package modelo;
 import java.util.ArrayList;
 
+
 public class Usuario {
 
 	private String username;
 	private String password;
-	
+	private ArrayList<Gasto> gastos;
 	
 	public Usuario(String username, String password) {
 		super();
@@ -31,6 +32,16 @@ public class Usuario {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+
+	public ArrayList<Gasto> getGastos() {
+		return gastos;
+	}
+
+
+	public void setGastos(ArrayList<Gasto> gastos) {
+		this.gastos = gastos;
 	}
 	
 	
