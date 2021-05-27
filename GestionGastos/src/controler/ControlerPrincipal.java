@@ -1,28 +1,32 @@
 package controler;
 
 
+import java.util.Scanner;
+
 import modelo.CreacionUsuario;
 import modelo.Usuario;
-import java.util.Scanner;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 
 public class ControlerPrincipal {
 
-	// Creamos objeto de tipo Arraylist de usuarios.
 	public static ArrayList<Usuario> listOfUsers = new ArrayList<>();
 
-	// Creamos m�todo de inicio del programa:
+
 	public static void Start() {
 
-		// Declaramos nuevo objeto scanner (reader) para interactuar con cliente.
+		// Declarar nuevo objeto tipo scanner llamado reader para interactuar con
+		// cliente.
+		// Declarar nuevo objeto de tipo Arraylist de users.
+		// Crear el while
+		// String de bienvenida: Dar opciones menÃº (login, createuser...)
+		// Crear los ifs
+
 		Scanner reader = new Scanner(System.in);
 
-		// Creamos Menu Principal con: mensaje de bienvenida y opciones de elecci�n:
-		// (crear cuenta, entrar en mi espacio, salir)
 		while (true) {
 
-			// Menu Principal:
+			// MenÃº de Opciones
 			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTION DE GASTOS.");
 			System.out.println("Por favor, introduce la opcion que desees llevar a cabo");
 			System.out.println("Crear cuenta");
@@ -31,16 +35,18 @@ public class ControlerPrincipal {
 
 			String respuesta1 = reader.nextLine();
 
-			// Condiciones con sus caminos a metodos (para ejecutar la eleccion del cliente)
+			// Condiciones con sus caminos a metodos
 			if (respuesta1.equalsIgnoreCase("Crear cuenta")) {
-				System.out.println("�Vamos a crearte una cuenta!");
+				System.out.println("¡Vamos a crearte una cuenta!");
 
 				CreacionUsuario.crearCuenta();
-
+				// GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a mÃ©todo aquÃ­
+				// es provisional, estoy probando
+				// que funcione.
 			}
 
 			else if (respuesta1.equalsIgnoreCase("Entrar en mi espacio")) {
-				System.out.println("¡Entremos en tu espacio personal!");
+				System.out.println("Â¡Entremos en tu espacio personal!");
 				LoginControler.login();
 			}
 
@@ -82,5 +88,33 @@ public class ControlerPrincipal {
 		listOfUsers.add(newUser);
 	}
 
-	// buscarUsuarioValidado metodo
+	public static boolean eliminarUsuario(String usuario) {
+
+		if (checkIfUserExist(usuario)) {
+			listOfUsers.remove(getUserFromList(usuario));
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static boolean cambiarNombreUsuario(String usuario, String newUserName) {
+	
+		if (checkIfUserExist(usuario)) {
+			getUserFromList(usuario).setUsername(newUserName);
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean cambiarContrasenia(String usuario, String nuevaContrasenia) {
+
+		if (checkIfUserExist(usuario)) {
+			getUserFromList(usuario).setPassword(nuevaContrasenia);
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

@@ -1,5 +1,7 @@
 package modelo;
 
+import java.sql.Date;
+
 public class Gasto {
 
 	private String nombre = "";
@@ -35,5 +37,23 @@ public class Gasto {
 	@Override
 	public String toString() {
 		return "Gasto [nombre=" + nombre + ", precio=" + precio + "]";
+	}
+
+
+	public void setValue(double valueGasto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public Date getDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public void setDate(java.util.Date dateToUpdate) {
+		// TODO Auto-generated method stub
+		
 	}
 	}
