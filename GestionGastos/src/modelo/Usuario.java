@@ -43,6 +43,12 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+
+	public void actualizar(int count, Gasto gasto) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
