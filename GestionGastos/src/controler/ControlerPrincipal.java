@@ -12,20 +12,21 @@ public class ControlerPrincipal {
 
 	public static ArrayList<Usuario> listOfUsers = new ArrayList<>();
 
+
 	public static void Start() {
 
 		// Declarar nuevo objeto tipo scanner llamado reader para interactuar con
 		// cliente.
 		// Declarar nuevo objeto de tipo Arraylist de users.
 		// Crear el while
-		// String de bienvenida: Dar opciones menú (login, createuser...)
+		// String de bienvenida: Dar opciones menÃº (login, createuser...)
 		// Crear los ifs
 
 		Scanner reader = new Scanner(System.in);
 
 		while (true) {
 
-			// Menú de Opciones
+			// MenÃº de Opciones
 			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTION DE GASTOS.");
 			System.out.println("Por favor, introduce la opcion que desees llevar a cabo");
 			System.out.println("Crear cuenta");
@@ -36,16 +37,16 @@ public class ControlerPrincipal {
 
 			// Condiciones con sus caminos a metodos
 			if (respuesta1.equalsIgnoreCase("Crear cuenta")) {
-				System.out.println("�Vamos a crearte una cuenta!");
+				System.out.println("¡Vamos a crearte una cuenta!");
 
 				CreacionUsuario.crearCuenta();
-				// GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a método aquí
+				// GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a mÃ©todo aquÃ­
 				// es provisional, estoy probando
 				// que funcione.
 			}
 
 			else if (respuesta1.equalsIgnoreCase("Entrar en mi espacio")) {
-				System.out.println("¡Entremos en tu espacio personal!");
+				System.out.println("Â¡Entremos en tu espacio personal!");
 				LoginControler.login();
 			}
 

@@ -1,4 +1,7 @@
 package clasesconmetodos;
+import java.util.Scanner;
+import modelo.Gasto;
+import modelo.Usuario;
 
 import controler.ControlerPrincipal;
 import modelo.Gasto;
@@ -11,7 +14,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GastosManipulador {
+	
+	public static void listarGasto (Scanner reader, Usuario usuarioValidated) {
+			
+				
+				int contadorparalistado = 1;
+				System.out.println("\nLista de gastos: ");
+				
+				for (Gasto gasto : usuarioValidated.getGastos()) {
 
+				System.out.println("- " + contadorparalistado + " " + gasto);
+				contadorparalistado++;
+			
+	}
 	
 	public static void borrarGastos(String usuario) {
 		ControlerPrincipal.getUserFromList(usuario).setGastos(new ArrayList<Gasto>());
@@ -31,7 +46,7 @@ public class GastosManipulador {
 			if (gastoName.equals(gasto.getNombre())) {
 				
 				System.out.print("Valor del gasto: " + gasto.getPrecio());
-				System.out.print(". ¿Quieres actualizar el valor de los gastos? (S / N) ");
+				System.out.print(". Â¿Quieres actualizar el valor de los gastos? (S / N) ");
 				String updateValueAnswer = reader.next();
 				
 				if (updateValueAnswer.equalsIgnoreCase("Y")) {
@@ -41,7 +56,7 @@ public class GastosManipulador {
 				}
 				
 				System.out.print("Fecha de gasto: " + gasto.getDate());
-				System.out.print(". ¿Quieres actualizar la fecha de gastos? (Y/N) ");
+				System.out.print(". Â¿Quieres actualizar la fecha de gastos? (Y/N) ");
 				String updateDateAnswer = reader.next();
 				
 				if (updateDateAnswer.equalsIgnoreCase("Y")) {
@@ -52,7 +67,7 @@ public class GastosManipulador {
 					try {
 						dateToUpdate = new SimpleDateFormat("dd/MM/yyyy").parse(dateGasto);
 					} catch (ParseException e) {
-						System.out.print("¡No actualizado! Formato inválido!");
+						System.out.print("Â¡No actualizado! Formato invÃ¡lido!");
 						e.printStackTrace();
 					} 
 					gasto.setDate(dateToUpdate);
