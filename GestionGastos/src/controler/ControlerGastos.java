@@ -1,6 +1,6 @@
 package controler;
 import java.util.Scanner;
-import java.util.ArrayList;
+
 
 public class ControlerGastos {
 
@@ -57,6 +57,8 @@ public class ControlerGastos {
 						"Disculpa, no te he entendido. Selecciona una de las opciones que se muestran en pantalla.\n");
 
 			}
+			
+			reader.close();
 
 		}
 
