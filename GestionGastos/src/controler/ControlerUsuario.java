@@ -1,12 +1,21 @@
 package controler;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import modelo.Gasto;
+import modelo.Usuario;
 
 public class ControlerUsuario {
 
 	public static void menu(String usuario) {
 
 		Scanner reader = new Scanner(System.in);
+		
+		String nuevoNombreContrasenia = "";
+		//ArrayList<Gasto> gastos = new ArrayList<Gasto>();
+		String SeleccionMenu = "";
+		
+		
 		while (true) {
 
 			System.out.println("MENU PRINCIPAL:");
@@ -18,8 +27,8 @@ public class ControlerUsuario {
 			System.out.println("--------------------------------\n");
 			System.out.println("Por favor, introduce la opción que desees llevar a cabo\n");
 			
-			String SeleccionMenu = reader.nextLine();
-			String nuevoNombreContrasenia = "";
+			SeleccionMenu = reader.nextLine();
+			
 
 			if (SeleccionMenu.equalsIgnoreCase("Cambiar nombre del usuario")) {
 

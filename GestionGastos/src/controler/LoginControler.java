@@ -15,6 +15,7 @@ public class LoginControler {
 	//first commit branch2
 	
 	public static void login() {
+		
 		Scanner scanner = new Scanner(System.in);
 		String usuario = "";
 		String password = "";
@@ -31,16 +32,15 @@ public class LoginControler {
 		
 		if (ControlerPrincipal.checkIfUserExist(usuario) &&
 				ControlerPrincipal.getUserFromList(usuario).getPassword().equals(password)) {
-			System.out.println("Bienvenido " + usuario);
-			//return añadir metodo que te lleva a ControlerUsuario;
 			
+			System.out.println("Bienvenido " + usuario);
+	
 			ControlerUsuario.menu(usuario);
 			ControlerGastos.MenuPrincipalGestionGastos(usuario);
+			
 		} else {
 			System.out.println("La contraseña o login no es correcto. Prueba otra vez");
-			//return "0";
 		}
-		
 		scanner.close();
 	}
 }

@@ -15,6 +15,11 @@ public class Gasto {
 	}
 
 
+	public Gasto() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -40,6 +45,7 @@ public class Gasto {
 	}
 
 
+	/*
 	public void setValue(double valueGasto) {
 		// TODO Auto-generated method stub
 		
@@ -57,3 +63,5 @@ public class Gasto {
 		
 	}
 	}
+	
+	/*

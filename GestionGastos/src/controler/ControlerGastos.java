@@ -1,6 +1,8 @@
 package controler;
+import java.util.ArrayList;
 import java.util.Scanner;
-
+import modelo.Usuario;
+import modelo.Gasto;
 
 public class ControlerGastos {
 
@@ -11,6 +13,8 @@ public class ControlerGastos {
 	// creamos metodo menu seleccion: MenuPrincipalGestionGastos
 	public static void MenuPrincipalGestionGastos(String usuario) {
 
+		Usuario usuarioObject = ControlerPrincipal.getUserFromList(usuario);
+		ArrayList<Gasto> gasto = usuarioObject.getGastos();
 		
 	//creamos bucle con sus condiciones y llamadas a metodos contenidos en GastosManipulador	
 		while (true) {
