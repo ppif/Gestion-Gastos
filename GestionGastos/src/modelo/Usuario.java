@@ -23,6 +23,7 @@ public class Usuario {
 		super();
 		this.username = username;
 		this.password = password;
+		this.gastos = new ArrayList<Gasto>();
 	}
 
 
@@ -44,24 +45,4 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-
- isaBranch2
-	public ArrayList<Gasto> getGastos() {
-		return gastos;
-	}
-
-
-	public void setGastos(ArrayList<Gasto> gastos) {
-		this.gastos = gastos;
-    
-    
-
-	public void actualizar(int count, Gasto gasto) {
-		// TODO Auto-generated method stub
-		
-
-	}
-	
-	
 }
