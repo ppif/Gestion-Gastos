@@ -11,12 +11,12 @@ public class ControlerGastos {
 	public static void MenuPrincipalGestionGastos(String usuario) {
 		Usuario usuarioObject = ControlerPrincipal.getUserFromList(usuario);
 		ArrayList<Gasto> gasto = usuarioObject.getGastos();
+		String SeleccionMenu = "";
+		Scanner reader = new Scanner(System.in);
 		
 		while (true) {
 			// nuevo objeto reader para la respuesta y String para almacenarla
-			Scanner reader = new Scanner(System.in);
-			String SeleccionMenu = reader.nextLine();
-
+			
 			System.out.println("MENU PRINCIPAL: GESTIONA TUS GASTOS");
 			System.out.println("Añadir gastos");
 			System.out.println("Modificar gastos");
@@ -25,6 +25,8 @@ public class ControlerGastos {
 			System.out.println("Salir");
 			System.out.println("--------------------------------\n");
 			System.out.println("Por favor, introduce la opción que desees llevar a cabo\n");
+			
+			SeleccionMenu = reader.nextLine();
 
 
 			if (SeleccionMenu.equalsIgnoreCase("Añadir gastos")) {
@@ -51,8 +53,9 @@ public class ControlerGastos {
 				System.out.println(
 						"Disculpa, no te he entendido. Selecciona una de las opciones que se muestran en pantalla.\n");
 			}		
-			reader.close();
 		}
+		
+		reader.close();
 	}
 
 }

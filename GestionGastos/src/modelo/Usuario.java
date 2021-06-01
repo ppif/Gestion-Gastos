@@ -23,6 +23,7 @@ public class Usuario {
 		super();
 		this.username = username;
 		this.password = password;
+		this.gastos = new ArrayList<Gasto>();
 	}
 
 
