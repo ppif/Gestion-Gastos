@@ -43,25 +43,4 @@ public class Gasto {
 	public String toString() {
 		return "Gasto [nombre=" + nombre + ", precio=" + precio + "]";
 	}
-
-
-	/*
-	public void setValue(double valueGasto) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public Date getDate() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	public void setDate(java.util.Date dateToUpdate) {
-		// TODO Auto-generated method stub
-		
-	}
-	}
-	
-	/*
+}

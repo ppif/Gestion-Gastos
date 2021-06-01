@@ -46,31 +46,28 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class GastosManipulador {
-
+	
 	public static void añadirGasto(Usuario usuarioObject, ArrayList<Gasto> gastos, Scanner scanner) {
-
-		String nombre;
-		double precio;
+		
+		String gastoName = "";
+		double precio = 0.0;
 		Gasto gasto = new Gasto("", 0.0);
 		boolean mas = false;
-		
+
 		do {
-			
 			System.out.println("Escribe nombre del gasto, por favor:");
-			nombre = scanner.nextLine(); 
+			gastoName = scanner.nextLine();
 			System.out.println("Escribe el precio, por favor:");
 			precio = scanner.nextDouble();
-			
-			gasto.setNombre(nombre);
+
+			gasto.setNombre(gastoName);
 			gasto.setPrecio(precio);
 			gastos.add(gasto);
 			usuarioObject.setGastos(gastos);
-		 
-			System.out.println("El gasto fue añadido" + "\n" +
-			"Quiere añadir más gastos?");
-			mas = scanner.hasNextBoolean();
+
+			System.out.println("El gasto fue añadido" + "\n" + "Quiere añadir más gastos?(y/n)");
+			mas = scanner.nextLine().equalsIgnoreCase("y") ? true : false;
 		} while (mas);
 	}
 
@@ -83,62 +80,76 @@ public class GastosManipulador {
 		}
 	}
 
-	public static void borrarGastos(Usuario usuario) {
-		usuario.setGastos(new ArrayList<Gasto>());
+	public static void borrarGastos(Usuario usuarioObject, ArrayList<Gasto> gastos, Scanner scanner) {
 
-		System.out.println("Gastos fueron borrados");
+		String gastoName = "";
+		Gasto gasto = new Gasto();
+		double precio = 0.0;
+		boolean mas = false;
+
+		do {
+			listarGasto(gastos);
+			System.out.println("Todos");
+			System.out.println("\nElije el gasto que quieres modificar: ");
+			gastoName = scanner.nextLine();
+
+			if (gastoName.equalsIgnoreCase("todos")) {
+				usuarioObject.setGastos(new ArrayList<Gasto>());
+				System.out.println("Gastos fueron borrados");
+			} else {
+				gasto = sacarGastoDeLista(gastos, gastoName);
+
+				if (!sacarGastoDeLista(gastos, gastoName).equals("null")) {			
+					gastos.remove(gasto);
+					usuarioObject.setGastos(gastos);
+					System.out.println("El gasto fue borrado" + "\n" + "Quiere borrar otro gasto?(y/n)");
+					mas = scanner.nextLine().equalsIgnoreCase("y") ? true : false;
+					
+				} else {
+					System.out.println("El nombre del gasto no coincide. Comprueba si has escrito el nombre correctamente!");
+				}
+			}
+		} while (mas);
 	}
 
 	public static void modificarGastos(Usuario usuarioObject, ArrayList<Gasto> gastos, Scanner scanner) {
 
 		String gastoName = "";
-		Gasto selectedGasto = new Gasto();
-		
-		listarGasto(gastos);
-		System.out.println("\nElije el gasto que quieres modificar: ");
-		gastoName = scanner.nextLine();
-		
+		Gasto gasto = new Gasto();
+		double precio = 0.0;
+		boolean mas = false;
 
-		for (Gasto gasto: gastos) {
-			if (gasto.getNombre().equalsIgnoreCase(gastoName)) {
-				
+		do {
+			listarGasto(gastos);
+			System.out.println("\nElije el gasto que quieres modificar: ");
+			gastoName = scanner.nextLine();
+			gasto = sacarGastoDeLista(gastos, gastoName);
+
+			if (!sacarGastoDeLista(gastos, gastoName).equals("null")) {
+				System.out
+						.println("Precio del gasto es " + gasto.getPrecio() + "\nIntroduce nuevo precio, por favor: ");
+				precio = scanner.nextDouble();
+				gasto.setPrecio(precio);
+				usuarioObject.setGastos(gastos);
+
+				System.out.println("El gasto fue modificado" + "\n" + "Quiere modificar otro gasto?(y/n)");
+				mas = scanner.nextLine().equalsIgnoreCase("y") ? true : false;
 			} else {
-				System.out.println("El nombre del gasto no coincide. Comprueba si has escrito el nombre correctamente!");
+				System.out
+						.println("El nombre del gasto no coincide. Comprueba si has escrito el nombre correctamente!");
+			}
+
+		} while (mas);
+	}
+
+	public static Gasto sacarGastoDeLista(ArrayList<Gasto> gastos, String gastoName) {
+		Gasto gasto = new Gasto("null", 0.0);
+
+		for (Gasto deGasto : gastos) {
+			if (gasto.getNombre().equalsIgnoreCase(gastoName)) {
+				return deGasto;
 			}
 		}
-		
-		
-		int count = 0;
-
-		System.out.print("¿Quieres actualizar el valor de los gastos? (S / N) ");
-		String updateValueAnswer = reader.next();
-
-		if (updateValueAnswer.equalsIgnoreCase("Y")) {
-			System.out.println("Ingrese el valor del gasto: ");
-			double valueGasto = reader.nextDouble();
-			gasto.setValue(valueGasto);
-		}
-
-		System.out.print("Fecha de gasto: " + gasto.getDate());
-		System.out.print(". Â¿Quieres actualizar la fecha de gastos? (Y/N) ");
-		String updateDateAnswer = reader.next();
-
-		if (updateDateAnswer.equalsIgnoreCase("Y")) {
-			System.out.println("Ingrese la fecha del gasto (dd/MM/yyyy): ");
-			String dateGasto = reader.next();
-
-			java.util.Date dateToUpdate = gasto.getDate();
-			;
-			try {
-				dateToUpdate = new SimpleDateFormat("dd/MM/yyyy").parse(dateGasto);
-			} catch (ParseException e) {
-				System.out.print("Â¡No actualizado! Formato invÃ¡lido!");
-				e.printStackTrace();
-			}
-			gasto.setDate(dateToUpdate);
-		}
-
-		if (usuarioValidated.getGastos().size() == count)
-			System.out.println(gastoName + " extraviado ....\n");
+		return gasto;
 	}
 }
