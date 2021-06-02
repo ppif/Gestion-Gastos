@@ -3,12 +3,15 @@ import java.util.ArrayList;
 
 
 public class Usuario {
-
+	//Creamos los atributos de Usuario
+	//Un atributo es el array de gastos
+	
 	private String username;
 	private String password;
 	private ArrayList<Gasto> gastos;
 
-	
+
+	//Creamos Getters, Setters, Constructor y toString
 	public ArrayList<Gasto> getGastos() {
 		return gastos;
 	}
@@ -45,4 +48,12 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Usuario [username=" + username + ", password=" + password + ", gastos=" + gastos + "]";
+	}
+	
+	
 }

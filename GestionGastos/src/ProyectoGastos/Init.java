@@ -9,8 +9,7 @@ public class Init {
 		// TODO Auto-generated method stub
 	
 		ControlerPrincipal.Start();
-		
-		
+	
 		
 	}
 }

@@ -3,11 +3,14 @@ package modelo;
 import java.sql.Date;
 
 public class Gasto {
-
+	//Creamos los atributos de Gasto
+	
 	private String nombre = "";
 	private double precio = 0;
 	
+
 	
+	//Creamos Getters, Setters, Constructor y toString
 	public Gasto(String nombre, double precio) {
 		super();
 		this.nombre = nombre;
