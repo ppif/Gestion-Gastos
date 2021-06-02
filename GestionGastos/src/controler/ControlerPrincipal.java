@@ -26,7 +26,7 @@ public class ControlerPrincipal {
 
 		while (true) {
 
-			// MenÃº de Opciones
+			// Menu de Opciones
 			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTION DE GASTOS.");
 			System.out.println("Por favor, introduce la opcion que desees llevar a cabo");
 			System.out.println("Crear cuenta");
@@ -37,16 +37,13 @@ public class ControlerPrincipal {
 
 			// Condiciones con sus caminos a metodos
 			if (respuesta1.equalsIgnoreCase("Crear cuenta")) {
-				System.out.println("¡Vamos a crearte una cuenta!");
+				System.out.println("�Vamos a crearte una cuenta!");
 
 				CreacionUsuario.crearCuenta();
-				// GestionGastos.MenuPrincipalGestionGastos(); // esta llamada a mÃ©todo aquÃ­
-				// es provisional, estoy probando
-				// que funcione.
-			}
+				}
 
 			else if (respuesta1.equalsIgnoreCase("Entrar en mi espacio")) {
-				System.out.println("Â¡Entremos en tu espacio personal!");
+				System.out.println("�Entremos en tu espacio personal!");
 				LoginControler.login();
 			}
 

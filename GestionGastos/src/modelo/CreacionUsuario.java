@@ -16,7 +16,7 @@ public class CreacionUsuario {
 		String password = crearPassword();
 		imprimirCuentaUsuario(usuario, password);
 		
-		// Crear nuevo obj User y asignarle usuario y pasword
+		// Crear nuevo objeto User y asignarle usuario y password
 		
 		Usuario newUser = new Usuario(usuario, password);
 		ControlerPrincipal.registerNewUser(newUser);
@@ -28,7 +28,7 @@ public class CreacionUsuario {
 			
 			Scanner reader = new Scanner(System.in);
 			
-			System.out.println("Introduce tu nombre:");
+			System.out.println("Por favor, introduce tu nombre:");
 			String nombre1 = reader.nextLine();
 			
 		return nombre1;
@@ -51,7 +51,7 @@ public class CreacionUsuario {
 		//Imprimir Cuenta Usuario
 		public static void imprimirCuentaUsuario(String Usuario, String password) {
 			
-		System.out.println("User Account: ");
+		System.out.println("Tu cuenta de usuario es la siguiente: ");
 		System.out.println("Usuario : " + Usuario);
 		System.out.println("Password: " + password);
 		

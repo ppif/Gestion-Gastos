@@ -7,6 +7,9 @@ import modelo.Usuario;
 
 public class ControlerUsuario {
 
+	//Creamos el menu principal
+	//Con opciones y llamadas a metodos contenidos en sus clases correspondientes
+
 	public static void menu(String usuario) {
 
 		Scanner reader = new Scanner(System.in);
@@ -19,7 +22,7 @@ public class ControlerUsuario {
 		while (true) {
 
 			System.out.println("MENU PRINCIPAL:");
-			System.out.println("Cambiar nombre del usuario");
+			System.out.println("Cambiar nombre de usuario");
 			System.out.println("Cambiar contraseña");
 			System.out.println("Administrar gastos");
 			System.out.println("Eliminar la cuenta");
@@ -30,32 +33,32 @@ public class ControlerUsuario {
 			SeleccionMenu = reader.nextLine();
 			
 
-			if (SeleccionMenu.equalsIgnoreCase("Cambiar nombre del usuario")) {
+			if (SeleccionMenu.equalsIgnoreCase("Cambiar nombre de usuario")) {
 
-				System.out.println("Introduce nuevo nombre de usuario, por favor");
+				System.out.println("Introduce un nuevo nombre de usuario, por favor");
 				nuevoNombreContrasenia = reader.nextLine();
 				
 				if (ControlerPrincipal.cambiarNombreUsuario(usuario, nuevoNombreContrasenia)) {
 					System.out.println("El nombre de usuario fue cambiado con exito");
 				} else {
-					System.out.println("Error. No existe usuario " + usuario);
+					System.out.println("Error. No existe el usuario: " + usuario);
 				}
 				
-				// GestionGastos.añadirGastos(usuario)
+				
 			}
 
 			else if (SeleccionMenu.equalsIgnoreCase("Cambiar contraseña")) {
 
-				System.out.println("Introduce nueva contraseña, por favor");
+				System.out.println("Introduce una contraseña nueva, por favor");
 				nuevoNombreContrasenia = reader.nextLine();
 				
 				if (ControlerPrincipal.cambiarNombreUsuario(usuario, nuevoNombreContrasenia)) {
 					System.out.println("La contraseña fue cambiada con exito");
 				} else {
-					System.out.println("Error. No existe usuario " + usuario);
+					System.out.println("Error. No existe el usuario: " + usuario);
 				}
 				
-				// GestionGastos.modificarGastos(usuario)
+				
 			}
 
 			else if (SeleccionMenu.equalsIgnoreCase("Administrar gastos")) {
@@ -66,9 +69,9 @@ public class ControlerUsuario {
 			else if (SeleccionMenu.equalsIgnoreCase("Eliminar la cuenta")) {
 
 				if (ControlerPrincipal.eliminarUsuario(usuario)) {
-					System.out.println("La cuenta fue eliminada.");
+					System.out.println("La cuenta fue eliminada con exito.");
 				} else {
-					System.out.println("Error. No existe la cuenta de " + usuario);
+					System.out.println("Error. No existe la cuenta: " + usuario);
 				}
 			}
 
@@ -85,5 +88,5 @@ public class ControlerUsuario {
 
 	}
 
-	// public static GestionGastosGenerico () {}
+
 }
