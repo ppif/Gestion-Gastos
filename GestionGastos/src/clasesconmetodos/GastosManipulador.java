@@ -15,9 +15,6 @@ public class GastosManipulador {
 	
 	public static void borrarGastos(String usuario) {
 		ControlerPrincipal.getUserFromList(usuario).setGastos(new ArrayList<Gasto>());
-		
-		
-		
 	}
 	
 	public static void modificarGastos(Scanner reader, Usuario usuarioValidated) {	
@@ -69,13 +66,6 @@ public class GastosManipulador {
 		if (usuarioValidated.getGastos().size() == count) 
 			System.out.println(gastoName + " extraviado ....\n");
 	}
-
-		public static void modificarGastos(String usuario) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		
-			
+	
 		}
 

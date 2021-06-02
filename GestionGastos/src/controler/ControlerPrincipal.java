@@ -6,32 +6,40 @@ import java.util.Scanner;
 import modelo.CreacionUsuario;
 import modelo.Usuario;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class ControlerPrincipal {
 
 	public static ArrayList<Usuario> listOfUsers = new ArrayList<>();
 
-	public static void Start() {
+	public static void Start() throws NumberFormatException, IOException {
 
 		// Declarar nuevo objeto tipo scanner llamado reader para interactuar con
 		// cliente.
 		// Declarar nuevo objeto de tipo Arraylist de users.
 		// Crear el while
-		// String de bienvenida: Dar opciones menú (login, createuser...)
+		// String de bienvenida: Dar opciones menu (login, createuser...)
 		// Crear los ifs
 
 		Scanner reader = new Scanner(System.in);
-
+		
 		while (true) {
 
 			// Menú de Opciones
-			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTION DE GASTOS.");
-			System.out.println("Por favor, introduce la opcion que desees llevar a cabo");
-			System.out.println("Crear cuenta");
-			System.out.println("Entrar en mi espacio");
-			System.out.println("Salir");
+			
+			//int Salir = 3;
+			//int CrearCuenta = 1;
+			//int Entrarenmiespacio = 2;
 
+			System.out.println("Bienvenido a tu Plataforma de Gestion de Gastos.\n");
+			System.out.println("Por favor, introduce la opcion que desees llevar a cabo.\n");
+			System.out.println("1. CrearCuenta");
+			System.out.println("2. Entrarenmiespacio");
+			System.out.println("3. Salir");
+			      
 			String respuesta1 = reader.nextLine();
 
 			// Condiciones con sus caminos a metodos
