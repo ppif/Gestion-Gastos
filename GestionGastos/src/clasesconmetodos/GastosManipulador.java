@@ -77,6 +77,11 @@ public class GastosManipulador {
 		for (Gasto gasto : gastos) {
 			System.out.println(gasto.getNombre() + ": " + gasto.getPrecio());
 		}
+		
+		if (gastos.isEmpty()) {
+			System.out.println("No hay gastos!");
+		}
+		
 		System.out.println("");
 	}
 
