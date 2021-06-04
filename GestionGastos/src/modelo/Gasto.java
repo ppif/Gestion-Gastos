@@ -7,6 +7,8 @@ public class Gasto {
 	
 	private String nombre = "";
 	private double precio = 0;
+	private Date date;
+	
 	
 
 	
@@ -45,5 +47,15 @@ public class Gasto {
 	@Override
 	public String toString() {
 		return "Gasto [nombre=" + nombre + ", precio=" + precio + "]";
+	}
+
+
+	public Date getDate() {
+		return date;
+	}
+
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 }

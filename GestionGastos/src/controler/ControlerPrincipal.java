@@ -23,7 +23,9 @@ public class ControlerPrincipal {
 		// Crear los ifs
 
 		Scanner reader = new Scanner(System.in);
-
+		//***boolean salir = false;
+		//***int opcion;
+		
 		while (true) {
 
 			// Menu de Opciones

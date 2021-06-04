@@ -151,4 +151,23 @@ public class GastosManipulador {
 		}
 		return gasto;
 	}
-}
+
+
+	
+	
+
+		
+		
+		
+		
+ 
+       
+		
+		
+		
+		
+ 
+	}  
+        
+	
+

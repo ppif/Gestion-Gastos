@@ -22,6 +22,7 @@ public class ControlerGastos {
 			System.out.println("Modificar gastos");
 			System.out.println("Borrar gastos");
 			System.out.println("Listado de gastos");
+			System.out.println("Gastos Por Dias");
 			System.out.println("Salir");
 			System.out.println("--------------------------------\n");
 			System.out.println("Por favor, introduce la opción que desees llevar a cabo\n");
@@ -45,6 +46,10 @@ public class ControlerGastos {
 				GastosManipulador.listarGasto(gasto);
 			}
 
+			else if (SeleccionMenu.equalsIgnoreCase("Gastos Por Dias")) {
+				GastosManipulador.listarGasto(gasto);
+			}
+			
 			else if (SeleccionMenu.equalsIgnoreCase("Salir")) {
 				break;
 			}
