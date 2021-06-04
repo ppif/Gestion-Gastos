@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="ProyectoGastos.Init" project="GestionGastos" 
+    file="/GestionGastos/src/ProyectoGastos/Init.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="77" y="27"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="utilidades.Utilidades" project="GestionGastos" 
+    file="/GestionGastos/src/utilidades/Utilidades.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="119" y="237"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="controler.ControlerPrincipal" project="GestionGastos" 
+    file="/GestionGastos/src/controler/ControlerPrincipal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="388" y="143"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="controler.ControlerGastos" project="GestionGastos" 
+    file="/GestionGastos/src/controler/ControlerGastos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="223" x="589" y="23"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="controler.ControlerUsuario" project="GestionGastos" 
+    file="/GestionGastos/src/controler/ControlerUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="226" x="589" y="152"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="controler.LoginControler" project="GestionGastos" 
+    file="/GestionGastos/src/controler/LoginControler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="227" x="592" y="275"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="modelo.CreacionUsuario" project="GestionGastos" 
+    file="/GestionGastos/src/modelo/CreacionUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1070" y="120"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="modelo.Gasto" project="GestionGastos" file="/GestionGastos/src/modelo/Gasto.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1063" y="417"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="modelo.Usuario" project="GestionGastos" 
+    file="/GestionGastos/src/modelo/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="450" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="clasesconmetodos.GastosManipulador" project="GestionGastos" 
+    file="/GestionGastos/src/clasesconmetodos/GastosManipulador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1372" y="120"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="11">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="12" name="listOfUsers"/>      
+      <multiplicity id="13" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="14">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="15" name="gastos"/>      
+      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
