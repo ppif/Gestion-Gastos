@@ -22,34 +22,37 @@ public class ControlerPrincipal {
 		// String de bienvenida: Dar opciones menÃƒÂº (login, createuser...)
 		// Crear los ifs
 
+	
+	
 		Scanner reader = new Scanner(System.in);
-		//***boolean salir = false;
-		//***int opcion;
+		
 		
 		while (true) {
 
 			// Menu de Opciones
 			System.out.println("BIENVENIDO A TU PLATAFORMA DE GESTION DE GASTOS.");
 			System.out.println("Por favor, introduce la opcion que desees llevar a cabo");
-			System.out.println("Crear cuenta");
-			System.out.println("Entrar en mi espacio");
-			System.out.println("Salir");
-
+			System.out.println("");
+			System.out.println("1. Crear Cuenta");
+			System.out.println("2.Entrar en mi espacio");
+			System.out.println("3.Salir");
+			
+			
 			String respuesta1 = reader.nextLine();
 
 			// Condiciones con sus caminos a metodos
-			if (respuesta1.equalsIgnoreCase("Crear cuenta")) {
+			if (respuesta1.equalsIgnoreCase("1")) {
 				System.out.println("¡Vamos a crearte una cuenta!");
 
 				CreacionUsuario.crearCuenta();
 				}
 
-			else if (respuesta1.equalsIgnoreCase("Entrar en mi espacio")) {
+			else if (respuesta1.equalsIgnoreCase("2")) {
 				System.out.println("¡Entremos en tu espacio personal!");
 				LoginControler.login();
 			}
 
-			else if (respuesta1.equalsIgnoreCase("Salir")) {
+			else if (respuesta1.equalsIgnoreCase("3")) {
 				break;
 
 			}

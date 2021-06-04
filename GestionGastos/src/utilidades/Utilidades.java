@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Utilidades {
 
-	//Metodo para limitar el acceso a un administrador
+	//Metodo para limitar el acceso a un administrador(pepe)
 	public static void optionPanel(String[] args) {
 		// TODO Auto-generated method stub
 		

@@ -22,18 +22,18 @@ public class ControlerUsuario {
 		while (true) {
 
 			System.out.println("MENU PRINCIPAL:");
-			System.out.println("Cambiar nombre de usuario");
-			System.out.println("Cambiar contraseña");
-			System.out.println("Administrar gastos");
-			System.out.println("Eliminar la cuenta");
-			System.out.println("Salir");
+			System.out.println("1.Cambiar nombre de usuario");
+			System.out.println("2.Cambiar contraseña");
+			System.out.println("3.Administrar gastos");
+			System.out.println("4.Eliminar la cuenta");
+			System.out.println("5.Salir");
 			System.out.println("--------------------------------\n");
 			System.out.println("Por favor, introduce la opción que desees llevar a cabo\n");
 			
 			SeleccionMenu = reader.nextLine();
 			
 
-			if (SeleccionMenu.equalsIgnoreCase("Cambiar nombre de usuario")) {
+			if (SeleccionMenu.equalsIgnoreCase("1")) {
 
 				System.out.println("Introduce un nuevo nombre de usuario, por favor");
 				nuevoNombreContrasenia = reader.nextLine();
@@ -47,7 +47,7 @@ public class ControlerUsuario {
 				
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Cambiar contraseña")) {
+			else if (SeleccionMenu.equalsIgnoreCase("2")) {
 
 				System.out.println("Introduce una contraseña nueva, por favor");
 				nuevoNombreContrasenia = reader.nextLine();
@@ -61,12 +61,12 @@ public class ControlerUsuario {
 				
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Administrar gastos")) {
+			else if (SeleccionMenu.equalsIgnoreCase("3")) {
 
 				ControlerGastos.MenuPrincipalGestionGastos(usuario);
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Eliminar la cuenta")) {
+			else if (SeleccionMenu.equalsIgnoreCase("4")) {
 
 				if (ControlerPrincipal.eliminarUsuario(usuario)) {
 					System.out.println("La cuenta fue eliminada con exito.");
@@ -75,7 +75,7 @@ public class ControlerUsuario {
 				}
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Salir")) {
+			else if (SeleccionMenu.equalsIgnoreCase("5")) {
 				break;
 			}
 

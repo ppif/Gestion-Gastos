@@ -18,46 +18,40 @@ public class ControlerGastos {
 			// nuevo objeto reader para la respuesta y String para almacenarla
 			
 			System.out.println("MENU PRINCIPAL: GESTIONA TUS GASTOS");
-			System.out.println("Añadir gastos");
-			System.out.println("Modificar gastos");
-			System.out.println("Borrar gastos");
-			System.out.println("Listado de gastos");
-			System.out.println("Gastos Por Dias");
-			System.out.println("Salir");
+			System.out.println("1.Añadir gastos");
+			System.out.println("2.Modificar gastos");
+			System.out.println("3.Borrar gastos");
+			System.out.println("4.Listado de gastos");
+			System.out.println("5.Gastos Por Dias");
+			System.out.println("6.Salir");
 			System.out.println("--------------------------------\n");
 			System.out.println("Por favor, introduce la opción que desees llevar a cabo\n");
 			
 			SeleccionMenu = reader.nextLine();
 
 
-			if (SeleccionMenu.equalsIgnoreCase("Añadir gastos")) {
+			if (SeleccionMenu.equalsIgnoreCase("1")) {
 				GastosManipulador.añadirGasto(usuarioObject, gasto, reader);
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Modificar gastos")) {
+			else if (SeleccionMenu.equalsIgnoreCase("2")) {
 				GastosManipulador.modificarGastos(usuarioObject, gasto, reader);
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Borrar gastos")) {
+			else if (SeleccionMenu.equalsIgnoreCase("3")) {
 				GastosManipulador.borrarGastos(usuarioObject, gasto, reader);
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Listado de gastos")) {
+			else if (SeleccionMenu.equalsIgnoreCase("4")) {
 				GastosManipulador.listarGasto(gasto);
 			}
 
-			else if (SeleccionMenu.equalsIgnoreCase("Gastos Por Dias")) {
+			else if (SeleccionMenu.equalsIgnoreCase("5")) {
 				GastosManipulador.listarGasto(gasto);
 			}
 			
-			else if (SeleccionMenu.equalsIgnoreCase("Dá de Gasto Mayor")) {
-				GastosManipulador.DiaGastoMayor(gasto);
-			}
 			
-			
-			
-			
-			else if (SeleccionMenu.equalsIgnoreCase("Salir")) {
+			else if (SeleccionMenu.equalsIgnoreCase("6")) {
 				break;
 			}
 
