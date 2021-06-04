@@ -55,6 +55,9 @@ public class GastosManipulador {
 		boolean mas = false;
 
 		do {
+			
+			
+			
 			System.out.println("Escribe nombre del gasto, por favor:");
 			gastoName = scanner.nextLine();
 			
@@ -157,7 +160,65 @@ public class GastosManipulador {
 		return gasto;
 	}
 
+	public static void DiaGastoMayor(ArrayList<Gasto> gastos){
+		
+		String gastoName = "";
+		double precio = 0.0;
+		Gasto gasto = new Gasto("", 0.0);
+		boolean mas = false;
 
+Scanner teclado = new Scanner(System.in);
+
+ 	// Solicitamos la cantidad de dias a procesar:
+	System.out.print("Ingrese la cantidad de dias: ");
+
+	int cantDias = teclado.nextInt();
+		 
+		        int[] dato = new int[cantDias];
+		        int gastomayor = 0, gastoTotal = 0, dia = 0;
+
+	String[] strDias = new String[7];
+		        strDias[0] = "Lunes";
+		        strDias[1] = "Martes";
+		        strDias[2] = "Miercoles";
+		        strDias[3] = "Jueves";
+		        strDias[4] = "Viernes";
+		        strDias[5] = "Sabado";
+		        strDias[6] = "Domingo";
+
+	//Creamos un ciclo for para repetir los datos segun la cantidad de dias:
+		        for (int i = 0; i < cantDias; i++){
+		            System.out.print("Ingrese los gastos del dia " + strDias[i%7] + ": " );
+		                dato[i] = teclado.nextInt();
+		               
+		 
+		        }
+		 
+		        for (int i = 0; i < cantDias; i++){
+		            System.out.println(dato[i]);
+		            gastoTotal += dato[i];
+		             if (dato[i] > gastomayor){
+		                gastomayor = dato[i];
+		                dia = i;
+		             }
+		        }
+		        System.out.println("");
+		        System.out.println("El mayor gasto fue de " + gastomayor + " del dia " + strDias[dia] );
+		        System.out.println("El gasto total fue de: " + gastoTotal );
+		    
+		 
+		
+	}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 
@@ -172,7 +233,7 @@ public class GastosManipulador {
 		
 		
  
-	}  
+
         
 	
 

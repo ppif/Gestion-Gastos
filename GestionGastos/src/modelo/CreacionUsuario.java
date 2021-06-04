@@ -1,7 +1,11 @@
 package modelo;
 
+import javax.swing.JOptionPane;
+
 import java.util.Random;
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 import org.w3c.dom.UserDataHandler;
 
@@ -27,6 +31,8 @@ public class CreacionUsuario {
 		public static String crearUsuario() {
 			
 			Scanner reader = new Scanner(System.in);
+			
+			
 			
 			System.out.println("Por favor, introduce tu nombre:");
 			String nombre1 = reader.nextLine();

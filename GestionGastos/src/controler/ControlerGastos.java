@@ -50,6 +50,13 @@ public class ControlerGastos {
 				GastosManipulador.listarGasto(gasto);
 			}
 			
+			else if (SeleccionMenu.equalsIgnoreCase("Dá de Gasto Mayor")) {
+				GastosManipulador.DiaGastoMayor(gasto);
+			}
+			
+			
+			
+			
 			else if (SeleccionMenu.equalsIgnoreCase("Salir")) {
 				break;
 			}
